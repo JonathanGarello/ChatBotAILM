@@ -1,0 +1,42 @@
+﻿@model IEnumerable<ChatBotAILM.Models.Mensaje>
+@{
+    ViewData["Title"] = "Charlar";
+}
+
+<h1>Charlar</h1>
+<div class="text-center" style="background-color:silver">
+
+@foreach (var item in Model) {
+
+            <p style="color:black; background-color: white">
+                @Html.DisplayFor(modelItem => item.Name)
+            </p>
+
+}
+
+</div>
+<hr />
+<br />
+<br />
+<br />
+<div class="row">
+    <div class="col-md-4">
+        <form action="RegistrarChat" method="post">
+  <label for="msj">Mensaje:</label>
+  <input id="msj" type="text" name="msj">
+  <input type="submit" value="Enviar">
+        </form>
+</div>
+</div>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<p>
+    <a asp-controller="Home" class="btn btn-lg btn-success" asp-action="Index">Volver</a>
+</p>
+<div>
+</div>
+
